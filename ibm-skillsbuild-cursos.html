@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursos IBM SkillsBuild · La Paz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" href="./logoUnivalle.png" type="image/png">
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --surface: #ffffff;
+    --ink: #1b2330;
+    --muted: #5d6675;
+    --line: #dfe3e9;
+    --navy: #1f3a5f;
+    --ai: #2f4f7f;     --ai-soft: #e8edf5;
+    --cyber: #2f5d50;  --cyber-soft: #e6efeb;
+    --biz: #8a5a2b;    --biz-soft: #f3ece3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1319;
+      --surface: #161b23;
+      --ink: #e9ecf1;
+      --muted: #9aa3b2;
+      --line: #252c37;
+      --navy: #25416b;
+      --ai: #8fb0e0;     --ai-soft: #1b2638;
+      --cyber: #86c0ac;  --cyber-soft: #17282a;
+      --biz: #d1a66f;    --biz-soft: #2b2218;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 72px 24px 96px; }
+  h1, h2, h3.serif { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; }
+  h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 12px; }
+  .lead { color: var(--muted); font-size: 1.05rem; margin: 0 0 40px; max-width: 52ch; }
+
+  .signup {
+    display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 10px;
+    padding: 26px 30px;
+    margin-bottom: 48px;
+  }
+  .signup h2 { font-size: 1.2rem; font-weight: 600; margin: 0 0 2px; }
+  .signup p { margin: 0; opacity: .8; font-size: .95rem; }
+
+  .btn {
+    display: inline-block; text-decoration: none; font: inherit; font-weight: 500; font-size: .93rem;
+    padding: 9px 18px; border-radius: 6px; border: 1px solid transparent; cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .btn-light { background: #fff; color: var(--navy); }
+  .btn-light:hover { background: #e9edf3; }
+  .btn-course { background: transparent; border-color: var(--c); color: var(--c); }
+  .btn-course:hover { background: var(--c); color: var(--surface); }
+  .btn:focus-visible, .code:focus-visible { outline: 2px solid var(--c, var(--navy)); outline-offset: 2px; }
+
+  h2.section { font-size: 1.3rem; font-weight: 600; margin: 0 0 4px; }
+  .section-sub { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
+
+  .courses { display: grid; gap: 12px; }
+  .course {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 8px 22px; align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--c);
+    border-radius: 8px;
+    padding: 20px 24px;
+  }
+  .hours {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 60px; height: 60px; border-radius: 8px;
+    background: var(--c-soft); color: var(--c);
+    font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.35rem; line-height: 1;
+  }
+  .hours small { font-family: "IBM Plex Sans", sans-serif; font-size: .68rem; font-weight: 500; margin-top: 3px; }
+  .course h3 { font-size: 1.05rem; font-weight: 500; margin: 0 0 6px; }
+  .code {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: .78rem;
+    background: var(--c-soft); border: 1px solid transparent; color: var(--c);
+    padding: 3px 9px; border-radius: 4px; cursor: pointer;
+  }
+  .code:hover { border-color: var(--c); }
+
+  .ai    { --c: var(--ai);    --c-soft: var(--ai-soft); }
+  .cyber { --c: var(--cyber); --c-soft: var(--cyber-soft); }
+  .biz   { --c: var(--biz);   --c-soft: var(--biz-soft); }
+
+  @media (max-width: 600px) {
+    main { padding-top: 48px; }
+    .course { grid-template-columns: auto 1fr; padding: 18px; }
+    .course .btn { grid-column: 1 / -1; text-align: center; }
+    .signup { padding: 22px; }
+    .signup .btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Cursos IBM SkillsBuild</h1>
+  <p class="lead">Sede La Paz. Primero crea tu cuenta y luego inscríbete en el curso que quieras.</p>
+
+  <section class="signup">
+    <div>
+      <h2>Registro en IBM SkillsBuild</h2>
+      <p>Necesario antes de abrir cualquier curso.</p>
+    </div>
+    <a class="btn btn-light" href="https://students-auth.skillsbuild.org/signup?org=5778&mgr=2560340REG" target="_blank" rel="noopener">Crear mi cuenta</a>
+  </section>
+
+  <h2 class="section">Cursos disponibles</h2>
+  <p class="section-sub">Toca el código del curso para copiarlo.</p>
+
+  <div class="courses">
+    <article class="course ai">
+      <div class="hours">10<small>horas</small></div>
+      <div>
+        <h3>Fundamentos de la Inteligencia Artificial</h3>
+        <button class="code" type="button" data-copy="2026-LPZ-LMLM-Inteligencia Artificial">2026-LPZ-LMLM-Inteligencia Artificial</button>
+      </div>
+      <a class="btn btn-course" href="https://students.yourlearning.ibm.com/activity/PLAN-487AC3915535" target="_blank" rel="noopener">Ir al curso</a>
+    </article>
+
+    <article class="course cyber">
+      <div class="hours">7<small>horas</small></div>
+      <div>
+        <h3>Fundamentos de Ciberseguridad</h3>
+        <button class="code" type="button" data-copy="2026-LPZ-LMLM-Ciberseguridad">2026-LPZ-LMLM-Ciberseguridad</button>
+      </div>
+      <a class="btn btn-course" href="https://students.yourlearning.ibm.com/activity/PLAN-A2EF25F0BED6" target="_blank" rel="noopener">Ir al curso</a>
+    </article>
+
+    <article class="course biz">
+      <div class="hours">17<small>horas</small></div>
+      <div>
+        <h3>Esenciales para el Emprendimiento</h3>
+        <button class="code" type="button" data-copy="2026-LPZ-LMLM-Emprendimiento">2026-LPZ-LMLM-Emprendimiento</button>
+      </div>
+      <a class="btn btn-course" href="https://students.yourlearning.ibm.com/activity/PLAN-C6B87A4BCB09" target="_blank" rel="noopener">Ir al curso</a>
+    </article>
+  </div>
+</main>
+
+<script>
+  document.querySelectorAll('.code').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var text = el.dataset.copy, original = el.textContent;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function () {
+          el.textContent = 'Copiado';
+          setTimeout(function () { el.textContent = original; }, 1200);
+        }).catch(function () {});
+      }
+    });
+  });
+</script>
+</body>
+</html>
